@@ -1,1 +1,5 @@
-OOP_Week1/Assignment1/App.config
+bin/
+obj/
+Properties/
+App.config
+.csproj
