@@ -11,6 +11,7 @@ namespace Assignment2
 
         public Deck(int players) 
         {
+            this.players = players;
             for (int i = 0; i < players; i++)
             {
                 InitCards();
