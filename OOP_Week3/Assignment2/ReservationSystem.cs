@@ -18,15 +18,10 @@ namespace Assignment2
             this.Reservations = new List<Reservation>();
             // end
 
-            this.Customers.Add(new Customer(0, "Jan", "Jansen", "jan@jansen.nl"));
-            this.Customers.Add(new Customer(1, "Pieter", "Post", "pieterpost@tnt.com"));
-
-            this.Books.Add(new Book(0, "The answer to life, the universe and everything", "Zebrox Fortytwo"));
-            this.Books.Add(new Book(1, "Anagrams for beginners", "Ymos Aunos"));
-
-            this.Reservations.Add(new Reservation(0, this.Customers[0], this.Books[0]));
-            this.Reservations.Add(new Reservation(1, this.Customers[0], this.Books[1]));
-            this.Reservations.Add(new Reservation(2, this.Customers[1], this.Books[1]));
+            this.GetBooks();
+            this.GetCustomers();
+            this.GetReservations();
+            
         }
 
         public string Name { get; set; }
@@ -34,8 +29,23 @@ namespace Assignment2
         public List<Reservation> Reservations { get; set; }
         public List<Book> Books { get; set; }
 
-        private void GetBooks() { }
-        private void GetCustomers() { }
-        private void GetReservations() { }
+        private void GetBooks() 
+        {
+            this.Books.Add(new Book(0, "The answer to life, the universe and everything", "Zebrox Fortytwo"));
+            this.Books.Add(new Book(1, "Anagrams for beginners", "Ymos Aunos"));
+        }
+
+        private void GetCustomers() 
+        {
+            this.Customers.Add(new Customer(0, "Jan", "Jansen", "jan@jansen.nl"));
+            this.Customers.Add(new Customer(1, "Pieter", "Post", "pieterpost@tnt.com"));
+        }
+
+        private void GetReservations() 
+        {
+            this.Reservations.Add(new Reservation(0, this.Customers[0], this.Books[0]));
+            this.Reservations.Add(new Reservation(1, this.Customers[0], this.Books[1]));
+            this.Reservations.Add(new Reservation(2, this.Customers[1], this.Books[1]));
+        }
     }
 }
